@@ -1,5 +1,6 @@
 plugins {
     id("seokang.plugin.feature")
+    alias(libs.plugins.seokang.library.jacoco)
 }
 
 android {

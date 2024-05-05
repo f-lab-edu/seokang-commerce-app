@@ -1,9 +1,10 @@
 plugins {
     id("seokang.plugin.application")
+    alias(libs.plugins.seokang.application.jacoco)
 }
 
 android {
-    namespace = "me.seokang.commerce"
+    namespace = "me.seokang.commerce.app"
 
     defaultConfig {
         applicationId = "me.seokang.commerce"

@@ -23,6 +23,10 @@ gradlePlugin {
             id = "seokang.plugin.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+        register("androidApplicationJacoco") {
+            id = "seokang.plugin.application.jacoco"
+            implementationClass = "AndroidApplicationJacocoConventionPlugin"
+        }
         register("AndroidHiltPlugin") {
             id = "seokang.plugin.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
@@ -34,6 +38,10 @@ gradlePlugin {
         register("AndroidLibraryComposePlugin") {
             id = "seokang.plugin.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidLibraryJacoco") {
+            id = "seokang.plugin.library.jacoco"
+            implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
         register("JavaLibraryPlugin") {
             id = "seokang.plugin.java.library"

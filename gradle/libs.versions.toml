@@ -1,8 +1,8 @@
 [versions]
 agp = "8.3.2"
-ksp = "1.9.22-1.0.17"
+ksp = "1.9.22-1.0.18"
 kotlin = "1.9.22"
-jetbrainsKotlinJvm = "1.9.0"
+jetbrainsKotlinJvm = "1.9.22"
 coreKtx = "1.13.1"
 
 activityKtx = "1.9.0"
@@ -17,10 +17,12 @@ navigationCompose = "2.7.7"
 coilCompose = "2.6.0"
 
 junit4 = "4.13.2"
-junitVersion = "1.1.5"
+junitAndroid = "1.1.5"
+junitJupiter = "5.9.3"
 espressoCore = "3.5.1"
 
-hilt = "2.49"
+hilt = "2.51"
+jacoco = "0.8.11"
 
 [libraries]
 # gradle-plugin
@@ -40,8 +42,11 @@ kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 
 # test
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitAndroid" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter"}
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junitJupiter"}
+junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junitJupiter"}
 
 # compose
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
@@ -72,6 +77,9 @@ jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "k
 jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+seokang-application-jacoco = { id = "seokang.plugin.application.jacoco", version = "unspecified" }
+seokang-library-jacoco = { id = "seokang.plugin.library.jacoco", version = "unspecified" }
 
 [bundles]
 compose = ["compose-bom", "compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3","compose-foundation", "coil-compose", "activity-compose", "lifecycle-compose", "navigation-compose"]
