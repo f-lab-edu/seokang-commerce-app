@@ -32,8 +32,12 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
                 "testImplementation"(libs.findLibrary("junit4").get())
+                "testImplementation"(libs.findLibrary("junit-jupiter").get())
+                "testImplementation"(libs.findLibrary("junit-jupiter-api").get())
+                "testRuntimeOnly"(libs.findLibrary("junit-jupiter-engine").get())
                 "androidTestImplementation"(libs.findLibrary("androidx-junit").get())
                 "androidTestImplementation"(libs.findLibrary("androidx-espresso-core").get())
+                "androidTestImplementation"(libs.findLibrary("junit4").get())
             }
         }
     }
