@@ -24,6 +24,28 @@ jobs:
           SONAR_PROJECT_KEY="${ORG_NAME}_${REPO_NAME}"
           echo "SONAR_PROJECT_KEY=$SONAR_PROJECT_KEY" >> $GITHUB_ENV 
 
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v2
+        with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+
+      - name: Provide execute permission to Gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build and generate Jacoco report
+        run: ./gradlew test createDebugJacocoTestReport
+
       - name: Analyze with SonarCloud
         uses: SonarSource/sonarcloud-github-action@master
         id: analyze-sonarcloud
@@ -35,5 +57,6 @@ jobs:
           args:
             -Dsonar.projectKey=${{ env.SONAR_PROJECT_KEY }}
             -Dsonar.organization=f-lab-edu-1
+            -Dsonar.coverage.jacoco.xmlReportPaths=./**/build/reports/jacoco/createDebugJacocoTestReport/jacocoTestReport.xml
+            -Dsonar.coverage.exclusions=**/R.class,**/R$*.class,**/BuildConfig.*,**/Manifest.*,**/*Test.*,android/**/*.*,**/*$Lambda$*.*,**/*$inlined$*.*,**/module/*.*,**/*App.*
 
-          
