@@ -21,3 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "seokang-commerce-app"
 include(":app")
+include(":core:data")
+include(":core:domain")
+include(":core:ui")
+include(":feature:main")
