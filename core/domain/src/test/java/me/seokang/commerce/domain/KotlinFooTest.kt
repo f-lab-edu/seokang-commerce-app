@@ -11,4 +11,8 @@ class KotlinFooTest {
         val actual = kotlinFoo.hello("펭")
         assertEquals(actual, "하")
     }
+
+    fun `call-me text test`() {
+
+    }
 }
