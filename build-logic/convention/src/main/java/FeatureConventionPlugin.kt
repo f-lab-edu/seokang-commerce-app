@@ -10,7 +10,7 @@ internal class FeatureConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("seokang.plugin.android.library")
                 apply("seokang.plugin.android.library.compose")
-                apply("seokang.plugin.hilt")
+                apply("seokang.plugin.android.hilt")
             }
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")

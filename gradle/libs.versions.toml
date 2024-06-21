@@ -78,7 +78,8 @@ jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrains
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
-seokang-application-jacoco = { id = "seokang.plugin.application.jacoco", version = "unspecified" }
+# Plugins define
+seokang-android-application = { id = "seokang.plugin.android.application", version = "unspecified" }
 seokang-library-jacoco = { id = "seokang.plugin.library.jacoco", version = "unspecified" }
 
 [bundles]
