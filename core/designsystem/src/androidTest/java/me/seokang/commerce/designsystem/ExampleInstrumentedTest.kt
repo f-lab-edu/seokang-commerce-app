@@ -1,4 +1,4 @@
-package me.seokang.commerce.ui
+package me.seokang.commerce.designsystem
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

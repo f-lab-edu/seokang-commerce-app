@@ -1,4 +1,4 @@
-package me.seokang.commerce.ui.theme
+package me.seokang.commerce.designsystem
 
 import android.app.Activity
 import android.os.Build
