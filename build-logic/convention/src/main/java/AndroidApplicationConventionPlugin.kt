@@ -11,6 +11,8 @@ internal class AndroidApplicationConventionPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
+                apply("seokang.plugin.android.application.jacoco")
+                apply("seokang.plugin.android.hilt")
             }
 
             extensions.configure<ApplicationExtension> {
@@ -22,6 +24,12 @@ internal class AndroidApplicationConventionPlugin : Plugin<Project> {
                     release {
                         isMinifyEnabled = true
                         proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+                    }
+                }
+
+                packaging {
+                    resources {
+                        excludes += "/META-INF/{AL2.0,LGPL2.1}"
                     }
                 }
             }

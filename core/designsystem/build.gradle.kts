@@ -1,12 +1,10 @@
 plugins {
-    id("seokang.plugin.android.library")
-    id("seokang.plugin.android.library.compose")
+    alias(libs.plugins.seokang.android.library)
+    alias(libs.plugins.seokang.android.library.compose)
 }
 
 android {
     namespace = "me.seokang.commerce.ui"
-
-    defaultConfig.consumerProguardFiles("consumer-rules.pro")
 }
 
 dependencies {

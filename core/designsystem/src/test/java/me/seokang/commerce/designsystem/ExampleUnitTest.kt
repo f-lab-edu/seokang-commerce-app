@@ -1,4 +1,4 @@
-package me.seokang.commerce.ui
+package me.seokang.commerce.designsystem
 
 import org.junit.Test
 

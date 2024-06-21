@@ -1,4 +1,4 @@
-package me.seokang.commerce.ui.theme
+package me.seokang.commerce.designsystem
 
 import androidx.compose.ui.graphics.Color
 

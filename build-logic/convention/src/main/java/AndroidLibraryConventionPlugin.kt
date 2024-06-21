@@ -14,6 +14,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
                 apply("kotlin-parcelize")
+                apply("seokang.plugin.android.library.jacoco")
             }
 
             extensions.configure<LibraryExtension> {

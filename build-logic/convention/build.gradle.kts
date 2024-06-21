@@ -16,21 +16,18 @@ dependencies {
 gradlePlugin {
     plugins {
         register("AndroidApplicationPlugin") {
-            id = "seokang.plugin.application"
+            id = "seokang.plugin.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("AndroidApplicationComposePlugin") {
-            id = "seokang.plugin.application.compose"
+            id = "seokang.plugin.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
-        register("androidApplicationJacoco") {
-            id = "seokang.plugin.application.jacoco"
+        register("AndroidApplicationJacocoPlugin") {
+            id = "seokang.plugin.android.application.jacoco"
             implementationClass = "AndroidApplicationJacocoConventionPlugin"
         }
-        register("AndroidHiltPlugin") {
-            id = "seokang.plugin.hilt"
-            implementationClass = "AndroidHiltConventionPlugin"
-        }
+
         register("AndroidLibraryPlugin") {
             id = "seokang.plugin.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
@@ -40,16 +37,24 @@ gradlePlugin {
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibraryJacoco") {
-            id = "seokang.plugin.library.jacoco"
+            id = "seokang.plugin.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
-        register("JavaLibraryPlugin") {
-            id = "seokang.plugin.java.library"
-            implementationClass = "JavaLibraryConventionPlugin"
-        }
+
         register("FeaturePlugin") {
             id = "seokang.plugin.feature"
             implementationClass = "FeatureConventionPlugin"
         }
+
+        register("AndroidHiltPlugin") {
+            id = "seokang.plugin.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
+
+        register("JavaLibraryPlugin") {
+            id = "seokang.plugin.java.library"
+            implementationClass = "JavaLibraryConventionPlugin"
+        }
+
     }
 }
