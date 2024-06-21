@@ -1,6 +1,5 @@
 plugins {
-    id("seokang.plugin.application")
-    alias(libs.plugins.seokang.application.jacoco)
+    alias(libs.plugins.seokang.android.application)
 }
 
 android {
