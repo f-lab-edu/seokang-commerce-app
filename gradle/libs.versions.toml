@@ -79,8 +79,10 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 # Plugins define
+seokang-feature = { id = "seokang.plugin.feature", version = "unspecified" }
 seokang-android-application = { id = "seokang.plugin.android.application", version = "unspecified" }
-seokang-library-jacoco = { id = "seokang.plugin.library.jacoco", version = "unspecified" }
+seokang-android-library = { id = "seokang.plugin.android.library", version = "unspecified" }
+seokang-android-library-compose = { id = "seokang.plugin.android.library.compose", version = "unspecified" }
 
 [bundles]
 compose = ["compose-bom", "compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3","compose-foundation", "coil-compose", "activity-compose", "lifecycle-compose", "navigation-compose"]

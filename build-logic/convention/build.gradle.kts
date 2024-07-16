@@ -19,10 +19,15 @@ gradlePlugin {
             id = "seokang.plugin.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
-        register("AndroidHiltPlugin") {
-            id = "seokang.plugin.android.hilt"
-            implementationClass = "AndroidHiltConventionPlugin"
+        register("AndroidApplicationComposePlugin") {
+            id = "seokang.plugin.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+        register("AndroidApplicationJacocoPlugin") {
+            id = "seokang.plugin.android.application.jacoco"
+            implementationClass = "AndroidApplicationJacocoConventionPlugin"
+        }
+
         register("AndroidLibraryPlugin") {
             id = "seokang.plugin.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
@@ -32,16 +37,24 @@ gradlePlugin {
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibraryJacoco") {
-            id = "seokang.plugin.library.jacoco"
+            id = "seokang.plugin.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
-        register("JavaLibraryPlugin") {
-            id = "seokang.plugin.java.library"
-            implementationClass = "JavaLibraryConventionPlugin"
-        }
+
         register("FeaturePlugin") {
             id = "seokang.plugin.feature"
             implementationClass = "FeatureConventionPlugin"
         }
+
+        register("AndroidHiltPlugin") {
+            id = "seokang.plugin.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
+
+        register("JavaLibraryPlugin") {
+            id = "seokang.plugin.java.library"
+            implementationClass = "JavaLibraryConventionPlugin"
+        }
+
     }
 }
