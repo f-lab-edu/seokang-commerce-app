@@ -16,19 +16,11 @@ dependencies {
 gradlePlugin {
     plugins {
         register("AndroidApplicationPlugin") {
-            id = "seokang.plugin.application"
+            id = "seokang.plugin.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
-        register("AndroidApplicationComposePlugin") {
-            id = "seokang.plugin.application.compose"
-            implementationClass = "AndroidApplicationComposeConventionPlugin"
-        }
-        register("androidApplicationJacoco") {
-            id = "seokang.plugin.application.jacoco"
-            implementationClass = "AndroidApplicationJacocoConventionPlugin"
-        }
         register("AndroidHiltPlugin") {
-            id = "seokang.plugin.hilt"
+            id = "seokang.plugin.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
         register("AndroidLibraryPlugin") {
