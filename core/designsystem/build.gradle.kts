@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "me.seokang.commerce.ui"
+    namespace = "me.seokang.commerce.designsystem"
 }
 
 dependencies {
